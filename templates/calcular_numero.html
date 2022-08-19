@@ -1,0 +1,22 @@
+
+
+
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="col-md-4 offset-md-4">
+    <form action="/calcular_numero/{{numero.id}}" method="POST" class="card bg-dark text-light">
+        <div class = "card-body p-4">
+            <div class = "mb-3">
+                <label for="numero">Número a calcular:</label>
+                <input type="Integer" name="numero" placeholder="Introduce el nuevo valor" value = "{{numero.numero}}">
+
+            </div>
+        </div>
+        <button class='btn btn-secondary'>Calcular</button>
+        
+    </form>
+</div>
+{% endblock %}
+
+

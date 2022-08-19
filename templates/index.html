@@ -1,0 +1,61 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+  Calculadora de Fibonacci | Home 
+{% endblock %}
+
+{% block body %}
+
+    <!-- FORM -->
+    <div class="row">
+
+    <div class="col-md-5 p-5">
+      <!-- MESSAGE -->
+      {% include 'partials/_message.html' %}
+
+      <!-- FORM -->
+      {%  include 'partials/_numberForm.html' %}
+
+      
+    </div>
+
+    <!-- contacts list -->
+    <div class="col-md-7">
+      {% for numero in numeros %}
+        <div class="card mb-1 bg-dark text-white">
+          <div class="card-body py-2 px-3">
+            <div class="d-flex justify-content-between">
+              <h5 class="card-title h6">{{numero.numero}}</h5>
+              <h5 class="card-title h6">{{resultado}}</h5>
+              
+              <div>
+                <a href="{{ url_for('numeros.actualizar_numero', id=numero.id) }}" class="btn btn-dark btn-sm rounded-0">Actualizar</a>
+                <a href="{{ url_for('numeros.eliminar_numero', id=numero.id) }}" class="btn btn-danger btn-sm rounded-0">Eliminar</a>
+                <a href="{{ url_for('numeros.calcular_numero', id=numero.id) }}" class="btn btn-light btn-sm rounded-0">Calcular Fibonacci</a>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+    </div>
+
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
