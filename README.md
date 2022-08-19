@@ -1,6 +1,6 @@
 # app-CRUD-fibonacci
 
-Esta aplicación desarrollada en FLask permite al usuario agregar, actualizar, consultar y eliminar numeros enteros almacenados en base de datos MySQL.
+Esta aplicación desarrollada en FLask permite al usuario agregar, actualizar, consultar y eliminar numeros enteros almacenados en base de datos MySQL. Así como la consulta dentro de la serie de Fibonacci. Adicionalmente contiene una api /fibonacci/get para ser consumida por terceros.
 
 Variables de entorno: 
 MYSQL_USER = 
